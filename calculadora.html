@@ -1,0 +1,57 @@
+<htm>
+
+    <head></head>
+
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <th bgcolor="#ec1940">
+                        <p>
+                            <font color="white">Calculadora</font>
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td bgcolor="#EEE9E9">
+                        <b>Introduza os números:</b><br>
+                        <input type="text" id="n1"><br>
+                        <input type="text" id="n2"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#EEE9E9">
+                        <input type="button" value="+" onClick="calc(this)">
+                        <input type="button" value="-" onClick="calc(this)">
+                        <input type="button" value="*" onClick="calc(this)">
+                        <input type="button" value="/" onClick="calc(this)">
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#ec1940" align="center">
+                        <p>
+                            <font color="white">Instituto CI&T</font>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            function calc(e) {
+
+                var operacao = e.value;
+
+                var n1 = parseFloat(document.getElementById("n1").value);
+                var n2 = parseFloat(document.getElementById("n2").value);
+
+                var calculo = eval(n1 + operacao + n2);
+
+                if (!isNaN(calculo)) {
+                    alert(calculo);
+                }
+
+            }            
+        </script>
+    </body>
+</htm>
