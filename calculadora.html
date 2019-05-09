@@ -1,13 +1,18 @@
 <htm>
 
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+            crossorigin="anonymous">
+        <style>
+        </style>
+    </head>
 
     <body>
-        <form>
+        <div id="calculadura" align="center">
             <table>
                 <tr>
                     <th bgcolor="#ec1940">
-                        <p>
+                        <p align="center">
                             <font color="white">Calculadora</font>
                         </p>
                     </th>
@@ -21,21 +26,22 @@
                 </tr>
                 <tr>
                     <td bgcolor="#EEE9E9">
-                        <input type="button" value="+" onClick="calc(this)">
-                        <input type="button" value="-" onClick="calc(this)">
-                        <input type="button" value="*" onClick="calc(this)">
-                        <input type="button" value="/" onClick="calc(this)">
+                        <input type="button" class="btn btn-primary" value="+" onClick="calc(this)">
+                        <input type="button" class="btn btn-primary" value="-" onClick="calc(this)">
+                        <input type="button" class="btn btn-primary" value="*" onClick="calc(this)">
+                        <input type="button" class="btn btn-primary" value="/" onClick="calc(this)">
                     </td>
                 </tr>
                 <tr>
-                    <td bgcolor="#ec1940" align="center">
+                    <td bgcolor="#ec1940" align="center" style="text-align: center;">
                         <p>
                             <font color="white">Instituto CI&T</font>
                         </p>
                     </td>
                 </tr>
             </table>
-        </form>
+        </div>
+
 
         <script>
             function calc(e) {
@@ -51,7 +57,7 @@
                     alert(calculo);
                 }
 
-            }            
+            }
         </script>
     </body>
 </htm>
