@@ -18,24 +18,26 @@
         </tr>
         <tr>
           <td bgcolor="#EEE9E9" align="center">
-            <input type="number" class="form-control" id="n1" placeholder="Primeiro Valor"><br>
-            <input type="number" class="form-control" id="n2" placeholder="Segundo Valor"><br><br>
+            <input type="number" class="form-control" id="n1" placeholder="Primeiro Valor"
+              aria-label="Primeiro Valor"><br>
+            <input type="number" class="form-control" id="n2" placeholder="Segundo Valor"
+              aria-label="Segundo valor"><br><br>
           </td>
         </tr>
         <tr>
           <td bgcolor="#EEE9E9">
             <div class="row" style="padding-left: 5px; padding-right: 5px; padding-bottom: 5px">
               <div class="col">
-                <input type="button" class="btn btn-danger" value="+" onClick="calc(this)">
+                <input type="button" class="btn btn-danger" value="+" onClick="calc('+')" aria-label="somar">
               </div>
               <div class="col">
-                <input type="button" class="btn btn-danger" value="-" onClick="calc(this)">
+                <input type="button" class="btn btn-danger" value="-" onClick="calc('-')" aria-label="subtrair">
               </div>
               <div class="col">
-                <input type="button" class="btn btn-danger" value="*" onClick="calc(this)">
+                <input type="button" class="btn btn-danger" value="*" onClick="calc('*')" aria-label="multiplicar">
               </div>
               <div class="col">
-                <input type="button" class="btn btn-danger" value="/" onClick="calc(this)">
+                <input type="button" class="btn btn-danger" value="/" onClick="calc('/')" aria-label="dividir">
               </div>
             </div>
           </td>
@@ -51,14 +53,21 @@
     </div>
 
     <script>
-      function calc(e) {
-
-        var operacao = e.value;
+      function calc(operacao) {
+        var calculo;
 
         var n1 = parseFloat(document.getElementById("n1").value);
         var n2 = parseFloat(document.getElementById("n2").value);
 
-        var calculo = eval(n1 + operacao + n2);
+        if (operacao == "+") {
+          calculo = n1 + n2;
+        } else if (operacao == "-") {
+          calculo = n1 - n2;
+        } else if (operacao == "*") {
+          calculo = n1 * n2;
+        } else if (operacao == "/") {
+          calculo = n1 / n2;
+        }
 
         if (!isNaN(calculo)) {
           alert(calculo);
@@ -77,4 +86,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
   </body>
-</html>
+
+  </html>
